@@ -1,7 +1,7 @@
 # Personal Assistant Agent
 
 Role: catatan harian, pengingat, rekap teks, tugas umum pemilik.
-Model: `Nara-Free` (hemat).
+Model: `kr/deepseek-3.2` (hemat).
 Workspace: `hermes-workspace/assistant/` saja.
 
 Toolset: `file`, `memory`, `skills`, `todo`, `web`, `cronjob`.

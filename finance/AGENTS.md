@@ -1,7 +1,7 @@
 # Finance Agent
 
 Role: rekap keuangan, baca nota/tagihan, ringkasan arus kas.
-Model: `Nara-Free` (hemat untuk tugas rutin). Naik ke Lead hanya bila anomali.
+Model: `kr/deepseek-3.2` (hemat untuk tugas rutin). Naik ke Lead hanya bila anomali.
 Workspace: `hermes-workspace/finance/` saja.
 
 Toolset: `file`, `memory`, `skills`, `todo`, `web` (kurs/pajak bila perlu).

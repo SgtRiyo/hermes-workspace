@@ -27,3 +27,13 @@ Fallback otomatis (bila Lead rate-limit): `Nara-Free` → `nara/glm-5.3-free` (l
 - Sub-agent tidak membaca workspace agen lain. Rujukan silang hanya via Lead.
 - Fakta/SOP abadi → `hermes-workspace/wiki/`. Pengalaman harian → `hermes-workspace/obsidian/`.
 - Kredensial hanya di `~/.hermes/.env` (perm 600), tidak pernah di workspace.
+
+## Aturan pencatatan wajib (setiap agen, tanpa kecuali)
+
+Setiap pesan yang memuat fakta klien / order / proyek / deadline / nominal / keputusan HARUS berakhir dengan file, bukan hanya memori bawaan:
+
+1. Tulis file: `obsidian/klien/<nama>.md`, `obsidian/proyek/<nama>.md`, atau `obsidian/sop/<topik>.md`.
+2. Isi: ringkasan 1-2 baris + tanggal + link dua arah (`[[../klien/budi|Budi]]` <-> `[[../proyek/totebag-budi|totebag Budi]]`).
+3. Update file terkait (mis. proyek lama yang dapat order baru).
+4. Verifikasi: `ls`/baca ulang file sebelum menjawab. Balasan wajib menyebut path file yang ditulis.
+5. Bila didelegasikan: induk memverifikasi file anak benar-benar ada sebelum lapor "dicatat". Memori bawaan boleh dipakai sebagai TAMBAHAN, bukan PENGGANTI.

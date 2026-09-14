@@ -10,3 +10,5 @@ Aturan:
 1. Kalender konten di `../obsidian/proyek/` tertaut ke SOP di `../wiki/`.
 2. Tidak mengakses data finance mentah.
 3. Semua klaim faktual wajib merujuk `../wiki/` (bukan memori kabur).
+
+Aturan pencatatan: wajib lihat ../TEAM_SOP.md bagian "Aturan pencatatan wajib" — setiap fakta berakhir menjadi file obsidian dengan link, bukan hanya memori bawaan.

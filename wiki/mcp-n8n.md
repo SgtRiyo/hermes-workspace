@@ -1,7 +1,11 @@
-# MCP / n8n Bridge (status 2026-09-14)
+# MCP / n8n Bridge (status 2026-09-14 — DONE)
 
 Infra jadi: n8n jalan lokal (`127.0.0.1:5678`, container `n8n`), terekspos via
 `https://n8n.sigitstudio.com` (tunnel ingress + CNAME ok, 200 verified).
+MCP `n8n` di Hermes: INSTALLED + TESTED (`mcp test n8n` → connected, 11 tools,
+8 enabled: health, list/get/find workflows, executions, activate/deactivate...).
+Env key di `~/.config/n8n-mcp/env` (600). Bridge venv di-pin `mcp<2` (SDK v2 tidak kompatibel).
+Gateway restart 2026-09-14 agar tool n8n termuat di sesi Telegram.
 Katalog MCP Hermes: `comfy-cloud`, `figma`, `linear`, `n8n`, `unreal-engine`.
 
 Langkah terakhir (butuh manusia via browser, ~5 menit):

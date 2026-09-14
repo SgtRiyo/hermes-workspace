@@ -10,3 +10,5 @@ Aturan:
 1. Ringkas setiap hari ke `../obsidian/proyek/` dengan tanggal.
 2. SOP pribadi/favorit ke `../wiki/`.
 3. Hal sensitif/keuangan diteruskan ke agen terkait via Lead.
+
+Aturan pencatatan: wajib lihat ../TEAM_SOP.md bagian "Aturan pencatatan wajib" — setiap fakta berakhir menjadi file obsidian dengan link, bukan hanya memori bawaan.

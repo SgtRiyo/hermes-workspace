@@ -33,6 +33,7 @@ Fallback otomatis (bila Lead rate-limit): `nara/glm-5.3-flash` → `kr/deepseek-
 Setiap pesan yang memuat fakta klien / order / proyek / deadline / nominal / keputusan HARUS berakhir dengan file, bukan hanya memori bawaan:
 
 1. Tulis file: `obsidian/klien/<nama>.md`, `obsidian/proyek/<nama>.md`, atau `obsidian/sop/<topik>.md`.
+2. DILARANG membuat folder baru di dalam `obsidian/` — hanya `klien/`, `proyek/`, `sop/` yang boleh ada. Butuh kategori baru? Minta Lead memutuskan dulu.
 2. Isi: ringkasan 1-2 baris + tanggal + link dua arah (`[[../klien/budi|Budi]]` <-> `[[../proyek/totebag-budi|totebag Budi]]`).
 3. Update file terkait (mis. proyek lama yang dapat order baru).
 4. Verifikasi: `ls`/baca ulang file sebelum menjawab. Balasan wajib menyebut path file yang ditulis.

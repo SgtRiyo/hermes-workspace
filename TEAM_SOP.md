@@ -37,3 +37,10 @@ Setiap pesan yang memuat fakta klien / order / proyek / deadline / nominal / kep
 3. Update file terkait (mis. proyek lama yang dapat order baru).
 4. Verifikasi: `ls`/baca ulang file sebelum menjawab. Balasan wajib menyebut path file yang ditulis.
 5. Bila didelegasikan: induk memverifikasi file anak benar-benar ada sebelum lapor "dicatat". Memori bawaan boleh dipakai sebagai TAMBAHAN, bukan PENGGANTI.
+
+## Aturan batch delegasi (anti-duplikat, anti file-hantu)
+
+1. Satu batch = satu dispatch. DILARANG me-dispatch ulang batch yang sudah parsial sukses hanya karena 1 task gagal — ambil hasil parsial, dispatch ULANG HANYA task yang gagal.
+2. Jangan `kill` delegasi yang masih berjalan kecuali macet >10 menit tanpa output. Kill = kerja + token terbuang.
+3. VERIFIKASI SEBELUM LAPOR: setiap path file yang disebut di jawaban HARUS sudah dicek ada via `ls`/baca ulang di turn yang sama. Path yang belum terverifikasi = tidak boleh dilaporkan. Melaporkan file yang tidak ada (file hantu) adalah pelanggaran SOP.
+4. Semua output anak WAJIB di dalam workspace agen masing-masing (lihat ATURAN OUTPUT PATH di tiap `AGENTS.md`). File di luar workspace = tolak, minta anak tulis ulang di path benar.

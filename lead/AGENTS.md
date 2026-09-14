@@ -1,7 +1,7 @@
 # Lead Agent
 
 Role: perencana + manajer sub-agent + troubleshooting.
-Model: `kr/glm-5` via `custom:9router`. Fallback otomatis ke `kr/deepseek-3.2`.
+Model: `nara/glm-5.3-flash` via `custom:9router` (Nara dibuka khusus untuk Lead). Fallback otomatis ke `kr/deepseek-3.2`.
 Workspace: `hermes-workspace/lead/` (dilarang mengacak workspace agen lain langsung).
 
 Toolset utama: `delegation`, `cronjob`, `terminal`, `file`, `memory`, `skills`, `web`, `kanban`, `todo`.

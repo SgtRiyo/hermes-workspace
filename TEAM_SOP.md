@@ -6,7 +6,7 @@ Prinsip: 1 agen = 1 role + 1 workspace + skill/tool tersendiri. Dilarang membuat
 
 | Agen | Workspace | Model | Tugas |
 |---|---|---|---|
-| Lead | `hermes-workspace/lead/` | `Coding` (flagship) | Merencanakan, me-manage sub-agent via `delegate_task`, troubleshooting. |
+| Lead | `hermes-workspace/lead/` | `kr/glm-5` | Merencanakan, me-manage sub-agent via `delegate_task`, troubleshooting. |
 | Finance | `hermes-workspace/finance/` | `kr/deepseek-3.2` (hemat) | Rekap keuangan, baca nota, ringkasan rutin. |
 | Sales | `hermes-workspace/sales/` | `kr/deepseek-3.2` | Follow-up klien, rekap order (contoh: Etsy). |
 | Marketing | `hermes-workspace/marketing/` | `kr/deepseek-3.2` | Draft konten, riset keyword, jadwal posting. |

@@ -28,17 +28,27 @@ Fallback otomatis (bila Lead rate-limit): `nara/glm-5.3-flash` → `nara/deepsee
 - Fakta/SOP abadi → `hermes-workspace/wiki/`. Pengalaman harian → `hermes-workspace/obsidian/`.
 - Kredensial hanya di `~/.hermes/.env` (perm 600), tidak pernah di workspace.
 
+## Aturan baca hemat (anti spiral 90x tool-call)
+
+Insiden 2026-09-15: Lead menghabiskan 92 tool call (66x execute_code + 15x read_file) hanya untuk membaca ulang SOP yang tidak berubah, plus 6x upaya buat skill tanpa diminta. Aturannya:
+
+1. Tiap file dibaca MAKS 1x per tugas, via tool `read_file`. Cukup.
+2. Dilarang membaca ulang via terminal/python/cat/base64/encode dalam bentuk apa pun.
+3. Jika output terlihat tersensor (redaksi secret), LAPORKAN dan lanjut — jangan diakali.
+4. Dilarang membuat skill baru kecuali user/Lead eksplisit meminta.
+5. Baca yang perlu saja: SOP relevan tugas ini, bukan seluruh wiki + seluruh obsidian.
+
 ## Aturan pencatatan wajib (setiap agen, tanpa kecuali)
 
 Setiap pesan yang memuat fakta klien / order / proyek / deadline / nominal / keputusan HARUS berakhir dengan file, bukan hanya memori bawaan:
 
 1. Tulis file: `obsidian/klien/<nama>.md`, `obsidian/proyek/<nama>.md`, atau `obsidian/sop/<topik>.md`.
 2. DILARANG membuat folder baru di dalam `obsidian/` — hanya `klien/`, `proyek/`, `sop/` yang boleh ada. Butuh kategori baru? Minta Lead memutuskan dulu.
-2. Isi: ringkasan 1-2 baris + tanggal + link dua arah (`[[../klien/budi|Budi]]` <-> `[[../proyek/totebag-budi|totebag Budi]]`).
-3. Update file terkait (mis. proyek lama yang dapat order baru).
-4. DILARANG menimpa isi file yang ada — selalu TAMBAH sebagai seksi bertanggal baru. Menghapus/mengganti konten lama = pelanggaran SOP.
-4. Verifikasi: `ls`/baca ulang file sebelum menjawab. Balasan wajib menyebut path file yang ditulis.
-5. Bila didelegasikan: induk memverifikasi file anak benar-benar ada sebelum lapor "dicatat". Memori bawaan boleh dipakai sebagai TAMBAHAN, bukan PENGGANTI.
+3. Isi: ringkasan 1-2 baris + tanggal + link dua arah (`[[../klien/budi|Budi]]` <-> `[[../proyek/totebag-budi|totebag Budi]]`).
+4. Update file terkait (mis. proyek lama yang dapat order baru).
+5. DILARANG menimpa isi file yang ada — selalu TAMBAH sebagai seksi bertanggal baru. Menghapus/mengganti konten lama = pelanggaran SOP.
+6. Verifikasi: `ls`/baca ulang file sebelum menjawab. Balasan wajib menyebut path file yang ditulis.
+7. Bila didelegasikan: induk memverifikasi file anak benar-benar ada sebelum lapor "dicatat". Memori bawaan boleh dipakai sebagai TAMBAHAN, bukan PENGGANTI.
 
 ## Aturan batch delegasi (anti-duplikat, anti file-hantu)
 

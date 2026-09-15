@@ -36,6 +36,7 @@ Setiap pesan yang memuat fakta klien / order / proyek / deadline / nominal / kep
 2. DILARANG membuat folder baru di dalam `obsidian/` — hanya `klien/`, `proyek/`, `sop/` yang boleh ada. Butuh kategori baru? Minta Lead memutuskan dulu.
 2. Isi: ringkasan 1-2 baris + tanggal + link dua arah (`[[../klien/budi|Budi]]` <-> `[[../proyek/totebag-budi|totebag Budi]]`).
 3. Update file terkait (mis. proyek lama yang dapat order baru).
+4. DILARANG menimpa isi file yang ada — selalu TAMBAH sebagai seksi bertanggal baru. Menghapus/mengganti konten lama = pelanggaran SOP.
 4. Verifikasi: `ls`/baca ulang file sebelum menjawab. Balasan wajib menyebut path file yang ditulis.
 5. Bila didelegasikan: induk memverifikasi file anak benar-benar ada sebelum lapor "dicatat". Memori bawaan boleh dipakai sebagai TAMBAHAN, bukan PENGGANTI.
 

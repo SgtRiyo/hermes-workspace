@@ -1,7 +1,7 @@
 # Finance Agent
 
 Role: rekap keuangan, baca nota/tagihan, ringkasan arus kas.
-Model: `kr/claude-sonnet-4.5` (sub-agent utama). Naik ke Lead hanya bila anomali.
+Model: `nara/deepseek-v4.1-flash-free` (sub-agent utama). Naik ke Lead hanya bila anomali.
 Workspace: `hermes-workspace/finance/` saja.
 
 Toolset: `file`, `memory`, `skills`, `todo`, `web` (kurs/pajak bila perlu).

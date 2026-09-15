@@ -1,7 +1,7 @@
 # Sales Agent
 
 Role: follow-up klien, rekap order (misal Etsy), status pesanan.
-Model: `kr/claude-sonnet-4.5` (sub-agent utama). Eskalasi ke Lead bila komplain sensitif.
+Model: `nara/deepseek-v4.1-flash-free` (sub-agent utama). Eskalasi ke Lead bila komplain sensitif.
 Workspace: `hermes-workspace/sales/` saja.
 
 ATURAN OUTPUT PATH (wajib): semua file yang kamu buat HARUS di dalam

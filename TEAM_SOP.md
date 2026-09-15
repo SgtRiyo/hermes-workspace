@@ -7,12 +7,12 @@ Prinsip: 1 agen = 1 role + 1 workspace + skill/tool tersendiri. Dilarang membuat
 | Agen | Workspace | Model | Tugas |
 |---|---|---|---|
 | Lead | `hermes-workspace/lead/` | `nara/glm-5.3-flash` (Nara, khusus Lead) | Merencanakan, me-manage sub-agent via `delegate_task`, troubleshooting. |
-| Finance | `hermes-workspace/finance/` | `kr/claude-sonnet-4.5` | Rekap keuangan, baca nota, ringkasan rutin. |
-| Sales | `hermes-workspace/sales/` | `kr/claude-sonnet-4.5` | Follow-up klien, rekap order (contoh: Etsy). |
-| Marketing | `hermes-workspace/marketing/` | `kr/claude-sonnet-4.5` | Draft konten, riset keyword, jadwal posting. |
-| Assistant | `hermes-workspace/assistant/` | `kr/claude-sonnet-4.5` | Catatan harian, pengingat, tugas umum. |
+| Finance | `hermes-workspace/finance/` | `nara/deepseek-v4.1-flash-free` | Rekap keuangan, baca nota, ringkasan rutin. |
+| Sales | `hermes-workspace/sales/` | `nara/deepseek-v4.1-flash-free` | Follow-up klien, rekap order (contoh: Etsy). |
+| Marketing | `hermes-workspace/marketing/` | `nara/deepseek-v4.1-flash-free` | Draft konten, riset keyword, jadwal posting. |
+| Assistant | `hermes-workspace/assistant/` | `nara/deepseek-v4.1-flash-free` | Catatan harian, pengingat, tugas umum. |
 
-Fallback otomatis (bila Lead rate-limit): `nara/glm-5.3-flash` → `kr/claude-sonnet-4.5` → `kr/deepseek-3.2` → `kr/qwen3-coder-next` (lihat `fallback_providers` di `~/.hermes/config.yaml`).
+Fallback otomatis (bila Lead rate-limit): `nara/glm-5.3-flash` → `nara/deepseek-v4.1-flash-free` → `kr/deepseek-3.2` → `kr/qwen3-coder-next` (lihat `fallback_providers` di `~/.hermes/config.yaml`).
 
 ## Onboarding agen baru (dilakukan Lead)
 

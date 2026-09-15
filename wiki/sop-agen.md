@@ -2,8 +2,8 @@
 
 1. Satu agen = satu role + satu workspace + skill/tool sendiri.
 2. Lead (`nara/glm-5.3-flash`, Nara khusus Lead): merencanakan, me-manage sub-agent, troubleshooting.
-3. Sub-agent (`kr/claude-sonnet-4.5`, fallback `kr/deepseek-3.2`): tugas rutin — rekap, baca teks, draft.
-4. Fallback otomatis: `nara/glm-5.3-flash` → `kr/claude-sonnet-4.5` → `kr/deepseek-3.2` → `kr/qwen3-coder-next` (config `~/.hermes/config.yaml` → `fallback_providers`).
+3. Sub-agent (`nara/deepseek-v4.1-flash-free`, fallback `kr/deepseek-3.2`): tugas rutin — rekap, baca teks, draft.
+4. Fallback otomatis: `nara/glm-5.3-flash` → `nara/deepseek-v4.1-flash-free` → `kr/deepseek-3.2` → `kr/qwen3-coder-next` (config `~/.hermes/config.yaml` → `fallback_providers`).
 5. Gateway berjalan sebagai `hermes-gateway.service` (systemd, auto-restart). Dashboard di `hermes.sigitstudio.com`.
 6. Backup otomatis tiap malam via cron (lihat `sbeats` / `hermes cron`).
 

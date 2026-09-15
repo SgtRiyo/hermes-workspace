@@ -1,7 +1,7 @@
 # Personal Assistant Agent
 
 Role: catatan harian, pengingat, rekap teks, tugas umum pemilik.
-Model: `kr/claude-sonnet-4.5` (sub-agent utama).
+Model: `nara/deepseek-v4.1-flash-free` (sub-agent utama).
 Workspace: `hermes-workspace/assistant/` saja.
 
 Toolset: `file`, `memory`, `skills`, `todo`, `web`, `cronjob`.

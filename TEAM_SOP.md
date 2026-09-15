@@ -35,8 +35,9 @@ Insiden 2026-09-15: Lead menghabiskan 92 tool call (66x execute_code + 15x read_
 1. Tiap file dibaca MAKS 1x per tugas, via tool `read_file`. Cukup.
 2. Dilarang membaca ulang via terminal/python/cat/base64/encode dalam bentuk apa pun.
 3. Jika output terlihat tersensor (redaksi secret), LAPORKAN dan lanjut — jangan diakali.
-4. Dilarang membuat skill baru kecuali user/Lead eksplisit meminta.
+4. Dilarang membuat skill baru kecuali: (a) user/Lead eksplisit meminta, ATAU (b) pola operasional berulang yang terbukti membuang >10 tool call — dengan wajib melapor ke user saat dibuat (preseden benar: `etsy-ops`, 2026-09-15).
 5. Baca yang perlu saja: SOP relevan tugas ini, bukan seluruh wiki + seluruh obsidian.
+6. Baca via `read_file`/`cat` (auto-approve), bukan `python3` — mengurangi prompt approval.
 
 ## Aturan pencatatan wajib (setiap agen, tanpa kecuali)
 

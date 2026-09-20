@@ -6,11 +6,19 @@ Prinsip: 1 agen = 1 role + 1 workspace + skill/tool tersendiri. Dilarang membuat
 
 | Agen | Workspace | Model | Tugas |
 |---|---|---|---|
-| Lead | `hermes-workspace/lead/` | `nara/glm-5.3-flash` (Nara, khusus Lead) | Merencanakan, me-manage sub-agent via `delegate_task`, troubleshooting. |
-| Finance | `hermes-workspace/finance/` | `nara/deepseek-v4.1-flash-free` | Rekap keuangan, baca nota, ringkasan rutin. |
-| Sales | `hermes-workspace/sales/` | `nara/deepseek-v4.1-flash-free` | Follow-up klien, rekap order (contoh: Etsy). |
-| Marketing | `hermes-workspace/marketing/` | `nara/deepseek-v4.1-flash-free` | Draft konten, riset keyword, jadwal posting. |
+| Lead | `hermes-workspace/lead/` | `nara/glm-5.3-flash` (Nara, khusus Lead) | Merencanakan, me-manage sub-agent via `delegate_task`, troubleshooting. SOP: `lead/SOP-trend.md`. |
+| Finance | `hermes-workspace/finance/` | `nara/deepseek-v4.1-flash-free` | Rekap keuangan, baca nota, ringkasan rutin. SOP: `finance/SOP-unit-economics.md`. |
+| Sales | `hermes-workspace/sales/` | `nara/deepseek-v4.1-flash-free` | Follow-up klien, rekap order (contoh: Etsy). SOP: `sales/SOP-followup.md`. |
+| Marketing | `hermes-workspace/marketing/` | `nara/deepseek-v4.1-flash-free` | Draft konten, riset keyword, jadwal posting. SOP: `marketing/SOP-seo-etsy.md`, `SOP-tiktok.md`, `SOP-mockup.md`, `SOP-listing-copy.md`. |
 | Assistant | `hermes-workspace/assistant/` | `nara/deepseek-v4.1-flash-free` | Catatan harian, pengingat, tugas umum. |
+
+## SOP impor agency-agents (2026-09-19)
+
+7 SOP ringkas diimpor dari repo [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) (lisensi MIT, atribusi wajib dipertahankan di tiap file). Aturan pakai:
+
+1. SOP ringkas (`SOP-*.md`) dibaca tiap tugas terkait; file lengkap (`REFERENCE-*.md`) HANYA bila butuh detail — jangan dibaca rutin (hemat tool call).
+2. REFERENCE tidak boleh diedit; perbaikan/penyesuaian dilakukan di SOP ringkas.
+3. SOP baru dari repo tsb mengikuti pola sama: atribusi + link REFERENCE + adaptasi Etsy + checklist.
 
 Fallback otomatis (bila Lead rate-limit): `nara/glm-5.3-flash` → `nara/deepseek-v4.1-flash-free` → `kr/deepseek-3.2` → `kr/qwen3-coder-next` (lihat `fallback_providers` di `~/.hermes/config.yaml`).
 

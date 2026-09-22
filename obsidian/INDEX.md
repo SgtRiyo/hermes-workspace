@@ -3,7 +3,7 @@
 Graf pengetahuan harian. Setiap catatan menautkan ke catatan lain dengan `[[link]]`.
 
 - `klien/` — satu file per klien/customer.
-- `proyek/` — satu file per proyek/usaha (contoh: [[../proyek/etsy|Etsy]]).
+- `proyek/` — satu file per proyek/usaha (contoh: [[../proyek/etsy|Etsy]], [[../proyek/etsy-digital-templates|Etsy digital templates]]).
 - `sop/` — ringkasan pengalaman operasional (menunjuk ke fakta abadi di `../../wiki/`).
 
 Aturan agen:

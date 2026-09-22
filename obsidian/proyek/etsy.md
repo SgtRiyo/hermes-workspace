@@ -2,6 +2,8 @@
 
 Usaha milik [[../klien/sigit|Sigit]]. Cron deep-work mingguan pernah jalan dari Hermes (job dihapus 2026-08-30, bisa dibuat ulang).
 
+Proyek lanjutan: [[etsy-digital-templates]] — produk digital editable (PRD 2026-09-21).
+
 Proses kerja mengikuti [[../sop/onboarding-agen|onboarding agen]] dan fakta abadi di `../../wiki/faq-etsy.md`.
 
 ## 2026-09-15 — Estimasi modal 50 totebag (Finance)
